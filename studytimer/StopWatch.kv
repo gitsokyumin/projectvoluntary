@@ -1,0 +1,142 @@
+BoxLayout:
+    orientation: 'vertical'
+    spacing: 20
+    
+    BoxLayout:
+        orientation: 'vertical'
+        size_hint: (1, None)
+        height: 100
+        spacing: 10
+
+        Label:
+            text: 'Current Time'
+            font_name: "Pretendard-Bold.ttf"
+            font_size: 25
+            size_hint_y: None
+            height: 30
+
+        Label:
+            id: time
+            font_size: 40
+            markup: True
+            text: '[b]00[/b]:00:00'
+
+    
+    # Korean 스톱워치
+    BoxLayout:
+        orientation: 'vertical'
+        size_hint: (1, None)
+        height: 200
+        spacing: 10
+
+        Label:
+            text: "Korean"
+            font_name: "Pretendard-Bold.ttf"
+            font_size: 30
+            size_hint_y: None
+            height: 40
+            color: (0.968, 0.506, 0.624, 1)
+
+        Label:
+            id: korean
+            font_name: "Pretendard-Medium.ttf"
+            font_size: 40
+            markup: True
+            text: '00:00:00'
+
+        BoxLayout:
+            orientation: 'horizontal'
+            padding: 20
+            spacing: 20
+            size_hint: (1, None)
+            height: 80
+
+            Button:
+                id: korean_start_stop
+                text: 'Start'
+                on_press: app.start_stop("korean")
+
+            Button:
+                id: korean_reset
+                text: 'Reset'
+                on_press: app.reset("korean")
+
+    # Mathmatics 스톱워치
+    BoxLayout:
+        orientation: 'vertical'
+        size_hint: (1, None)
+        height: 200
+        spacing: 10
+
+        Label:
+            text: "Mathmatics"
+            font_name: "Pretendard-Bold.ttf"
+            font_size: 30
+            size_hint_y: None
+            height: 40
+            color: (0.506, 0.506, 0.969, 1)
+
+        Label:
+            id: mathmatics
+            font_name: "Pretendard-Medium.ttf"
+            font_size: 40
+            markup: True
+            text: '00:00:00'
+
+        BoxLayout:
+            orientation: 'horizontal'
+            padding: 20
+            spacing: 20
+            size_hint: (1, None)
+            height: 80
+
+            Button:
+                id: mathmatics_start_stop
+                text: 'Start'
+                on_press: app.start_stop("mathmatics")
+
+            Button:
+                id: mathmatics_reset
+                text: 'Reset'
+                on_press: app.reset("mathmatics")
+
+    # English 스톱워치
+    BoxLayout:
+        orientation: 'vertical'
+        size_hint: (1, None)
+        height: 200
+        spacing: 10
+
+        Label:
+            text: "English"
+            font_name: "Pretendard-Bold.ttf"
+            font_size: 30
+            size_hint_y: None
+            height: 40
+            color: (0.624, 0.969, 0.506, 1)
+
+        Label:
+            id: english
+            font_name: "Pretendard-Medium.ttf"
+            font_size: 40
+            markup: True
+            text: '00:00:00'
+
+        BoxLayout:
+            orientation: 'horizontal'
+            padding: 20
+            spacing: 20
+            size_hint: (1, None)
+            height: 80
+
+            Button:
+                id: english_start_stop
+                text: 'Start'
+                font_name: "Pretendard-Medium.ttf"
+                on_press: app.start_stop("english")
+
+            Button:
+                id: english_reset
+                text: 'Reset'
+                font_name: "Pretendard-Medium.ttf"
+                on_press: app.reset("english")
